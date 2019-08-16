@@ -1,0 +1,7 @@
+.result {
+	margin-top: 2em;
+}
+
+#good-luck, #bad-luck, #meh-luck {
+  display: none;
+}

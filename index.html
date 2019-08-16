@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fortune Teller</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/scripts.js"></script>
+  </head>
+  <body>
+
+	<section class="header">
+  		<div class="container">
+     		<div class="jumbotron">
+        		<h2>Good luck, or bad luck... Which one is coming my way?</h2>
+      		</div>
+      	</div>
+    </section>
+
+    <section class="quiz">
+    	<div class="container">
+      		<form id="fortune_teller">
+      			<div class="form-group">
+          			<p>From the list below, check off all instances of bringing bad luck that have happened to you in the last month...</p>
+          			<input type="checkbox" name="bad-luck" value="cat"> Walking next to a black cat.<br>
+          			<input type="checkbox" name="bad-luck" value="ladder"> Walking under a ladder.<br>
+          			<input type="checkbox" name="bad-luck" value="mirror"> Breaking a mirror near you.<br>
+          			<input type="checkbox" name="bad-luck" value="crack"> Stepping on a crack on the pavement.<br>
+          			<input type="checkbox" name="bad-luck" value="umbrella"> Opening an umbrella indoors.<br>
+          			<input type="checkbox" name="bad-luck" value="thirteenth"> Being born on Friday the 13th in your birth month.<br>
+          			<input type="checkbox" name="bad-luck" value="none"> I don't believe in superstitions.<br>
+          			<input type="checkbox" name="bad-luck" value="unafraid"> I fear nothing!<br>
+        		</div>
+        		<div class="form-group">
+          			<p>Keeping this in mind, from the second list below, check off all instances of receiving good luck that have happened to you in the last month...</p>
+          			<input type="checkbox" name="good-luck" value="salt"> Tossing a salt shaker over your right shoulder.<br>
+          			<input type="checkbox" name="good-luck" value="horseshoe"> Carrying a horseshoe in your back pocket.<br>
+          			<input type="checkbox" name="good-luck" value="clover"> Finding a four-leaf clover.<br>
+          			<input type="checkbox" name="good-luck" value="rabbit"> Carrying a rabbit's foot in your pocket.<br>
+          			<input type="checkbox" name="good-luck" value="rainbow"> Viewing a rainbow outside.<br>
+          			<input type="checkbox" name="good-luck" value="none"> I don't believe in superstitions.<br>
+          			<input type="checkbox" name="good-luck" value="own"> I believe you make your own good luck of a situation.<br>
+        		</div>
+        		<button type="submit" class="btn btn-info">Tell me my fortune</button>
+        	</form>
+        	<div class="result">
+        		<h4>Here is your fortune...</h4>
+        		<span id="bad-luck">
+        			<p><b>You may want to walk carefully for a while. You never know what may be lurking around you.</b></p>
+      			</span>
+      			<br>
+      			<span id="good-luck">
+        			<p><b>You need not worry. Good luck will come your way soon, but be careful all the same!</b></p>
+      			</span>
+      			<br>
+      			<span id="meh-luck">
+        			<p><b>Meh, things are a little hazy right now. Anything can happen...</b></p>
+      			</span>
+      		</div>
+        </div>
+    </section>
+        
+
+  </body>
+</html>
