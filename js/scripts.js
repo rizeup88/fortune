@@ -1,23 +1,23 @@
 $(document).ready(function() {
   $("form#fortune_teller").submit(function(event) {
     event.preventDefault();
-    $("#bad-luck").hide();
+
+    var badLuckCounter = 0;
+    var goodLuckCounter = 0;
+
     $("input:checkbox[name=bad-luck]:checked").each(function() {
-      var badLuckCounter = $(this).val();
-      $('#bad-luck').append(badLuckCounter + "<br>");
+      badLuckCounter = (badLuckCounter + 1)
     });
-    $("#good-luck").hide();
     $("input:checkbox[name=good-luck]:checked").each(function() {
-      var goodLuckCounter = $(this).val();
-      $('#good-luck').append(goodLuckCounter + "<br>");
+      goodLuckCounter = (goodLuckCounter + 1)
     });
 
     if (badLuckCounter < goodLuckCounter) {
-      (".result" === "#good-luck")
+      $("#good-luck").show()
     } else if (goodLuckCounter < badLuckCounter) {
-      (".result" === "#bad-luck")
-    } else {
-      (".result" === "#meh-luck")
+      $("#bad-luck").show()
+    } else if (goodLuckCounter === badLuckCounter) {
+      $("#meh-luck").show()
     }
     $('#fortune_teller').hide();
   });
